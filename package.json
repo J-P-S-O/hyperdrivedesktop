@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lessw": "npm i -g less && lessc style.less style.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0",
+     "start": "electron ."
   },
   "repository": {
     "type": "git",
