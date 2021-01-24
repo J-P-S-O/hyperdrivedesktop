@@ -2,8 +2,8 @@
 const Hyperdrive = require("Hyperdrive")
 onload = () =>{
   let bd = document.querySelector("body")
-  if (location.hash){
-    if ()
+  if (location.hash.startsWith("hyper://")){
+    
     //process hash
   }else{
 

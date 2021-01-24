@@ -6,7 +6,7 @@
   "scripts": {
     "lessw": "npm i -g less && lessc style.less style.css",
     "test": "echo \"Error: no test specified\" && exit 0",
-     "start": "electron ."
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,7 @@
   "devDependencies": {
     "electron": "^11.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "hyperdrive": "^10.20.0"
+  }
 }
