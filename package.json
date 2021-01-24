@@ -1,0 +1,24 @@
+{
+  "name": "hypdesk",
+  "version": "1.0.0",
+  "description": "A hyperdrive client with electron.",
+  "main": "index.js",
+  "scripts": {
+    "lessw": "npm i -g less && lessc style.less style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/j-p-s-o/hyperdrivedesktop.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/j-p-s-o/hyperdrivedesktop/issues"
+  },
+  "homepage": "https://github.com/j-p-s-o/hyperdrivedesktop#readme",
+  "devDependencies": {
+    "electron": "^11.2.1"
+  },
+  "dependencies": {}
+}
