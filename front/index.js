@@ -15,7 +15,7 @@ onload = () =>{
      bt.innerHTML = "Choose a folder"
      bt.onclick = openBox
     //process hash
-    var drive =  new Hyperdrive(dest, location.hash)
+    
   }else if (location.hash !== ""){
     var drive = new Hyperdrive(location.hash)
   }else{
