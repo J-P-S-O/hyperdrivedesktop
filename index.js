@@ -1,16 +1,18 @@
 // main hypdesk file
 let { BrowserWindow, app } = require("electron")
+
 function createWindow () {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false
+      contextIsolation: false,
+      enableRemoteModule: true
     }
   })
 
-  win.loadFile('index.html#hyper://2ye')
+  win.loadFile(`index.html`)
 }
 
 app.whenReady().then(createWindow)

@@ -1,8 +1,8 @@
 //frontend scripts
 const Hyperdrive = require("Hyperdrive")
-let { openbox } = require("./ui")
+let { openbox } = require("./front/ui")
 let { remote } = require("electron")
-let {BrowserWindow} = remote
+let {dialog} = remote
 onload = () =>{
   let bd = document.querySelector("body")
   if (location.hash.startsWith("hyper://")){
@@ -22,7 +22,7 @@ onload = () =>{
     var drive = new Hyperdrive(location.hash.split("&")[0])
   if (location.hash.split("&")[1]){
     drive.readdir(location.hash.split("&")[1])
-    
+
   }
   }else{
 

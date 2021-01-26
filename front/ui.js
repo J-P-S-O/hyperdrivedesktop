@@ -1,11 +1,12 @@
-let { dialog } = require("electron")
+let { ipcRenderer } = require("electron")
 let {Hyperdrive } = require("Hyperdrive")
 exports.openBox = () =>{
-  let v = dialog.showOpenDialogSync(
-    {
-      properties: ["openDirectory"]
-    }
+  ipcRenderer.send(
+    "fl", {hs: location.hash}
   )
-  var drive =  new Hyperdrive(v, location.hash)
-  location = `index.html#${v}`
+  ipcRenderer.on(location.hash, (v, arg)=>{
+    var drive =  new Hyperdrive(v, location.hash)
+    location = `index.html#${location.hash}`
+  })
+
 }
