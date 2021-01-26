@@ -15,10 +15,13 @@ onload = () =>{
      bt.innerHTML = "Choose a folder"
      bt.onclick = openBox
     //process hash
-    
+    dv.appendChild(txt)
+    dv.appendChild(bt)
+    bd.appendChild(dv)
   }else if (location.hash !== ""){
     var drive = new Hyperdrive(location.hash)
   }else{
+    
 // default view
   }
 }
