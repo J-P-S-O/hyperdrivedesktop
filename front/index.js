@@ -19,9 +19,13 @@ onload = () =>{
     dv.appendChild(bt)
     bd.appendChild(dv)
   }else if (location.hash !== ""){
-    var drive = new Hyperdrive(location.hash)
-  }else{
+    var drive = new Hyperdrive(location.hash.split("&")[0])
+  if (location.hash.split("&")[1]){
+    drive.readdir(location.hash.split("&")[1])
     
+  }
+  }else{
+
 // default view
   }
 }
