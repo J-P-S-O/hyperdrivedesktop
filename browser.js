@@ -1,7 +1,11 @@
-onresize = doLayout;
+let { navHome } = require("./lib")
 var isLoading = false;
-
+let HistMap = []
 onload = function() {
+  
+  onresize = doLayout;
+  
+  var  hypdiv = document.querySelector("#hyper")
   doLayout();
 
   document.querySelector('#back').onclick = function() {
@@ -35,17 +39,23 @@ onload = function() {
 };
 
 function navigateTo(url) {
- 
+if (url == "meta:home"){
+	navHome()
+	return 0;
+}else{
+	
+}
 
 }
 
 function doLayout() {
+  var hypdiv = document.querySelector("#hyper")
  
   var controls = document.querySelector('#controls');
   var controlsHeight = controls.offsetHeight;
   var windowWidth = document.documentElement.clientWidth;
   var windowHeight = document.documentElement.clientHeight;
-  var webviewWidth = windowWidth;
-  var webviewHeight = windowHeight - controlsHeight;
+  hypdiv.style.width = windowWidth
+  hypdiv.style.height = windowHeight - controlsHeight
 }
 
